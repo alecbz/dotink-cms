@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :section %><br />
-    <%= f.text_field :section %>
+    <%= select("section", "id", @sections.map { |a| [a.name, a.id] }) %>
   </p>
   <p>
     <%= f.submit 'Create' %>

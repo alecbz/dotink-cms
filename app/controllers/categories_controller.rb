@@ -25,6 +25,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new.xml
   def new
     @category = Category.new
+    @sections = Section.find(:all)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,7 +42,8 @@ class CategoriesController < ApplicationController
   # POST /categories.xml
   def create
     @category = Category.new(params[:category])
-
+    @category.section = Section.find(params[:section][:id])
+    
     respond_to do |format|
       if @category.save
         flash[:notice] = 'Category was successfully created.'
