@@ -903,3 +903,204 @@ Migrating to CreateCategories (20091104151308)
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sections")[0m
+
+
+Processing HomeController#index (for 168.229.28.69 at 2009-11-11 09:15:49) [GET]
+Rendering home/index
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
+
+
+Processing SectionsController#index (for 168.229.28.69 at 2009-11-11 09:15:56) [GET]
+  [4;36;1mSection Load (12.3ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 119ms (View: 87, DB: 12) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/sections]
+
+
+Processing CategoriesController#index (for 168.229.28.69 at 2009-11-11 09:16:03) [GET]
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mSection Load (0.1ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+Completed in 79ms (View: 57, DB: 1) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/categories]
+
+
+Processing ApplicationController#index (for 168.229.28.69 at 2009-11-11 09:16:20) [GET]
+
+ActionController::RoutingError (No route matches "/articles" with {:method=>:get}):
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 168.229.28.69 at 2009-11-11 09:16:23) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
+
+
+Processing HomeController#index (for 168.229.28.69 at 2009-11-11 09:22:05) [GET]
+Rendering home/index
+ERROR: compiling _run_erb_app47views47home47index46html46erb RAISED compile error
+/home/alec/dotink-cms/app/views/home/index.html.erb:3: syntax error, unexpected ':', expecting ')'
+...at(( link_to "Your Sections" :sections ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47home47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>This is your homepage!!!</h1>\n<p>Your articles will appear somewhere here</p>\n"
+
+; @output_buffer.concat(( link_to "Your Sections" :sections ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/alec/dotink-cms/app/views/home/index.html.erb:7:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/alec/passenger/vendor/rack-1.0.0-git/lib/rack/head.rb:9:in `call'
+/home/alec/passenger/vendor/rack-1.0.0-git/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/home/alec/passenger/vendor/rack-1.0.0-git/lib/rack/lock.rb:11:in `call'
+/home/alec/passenger/vendor/rack-1.0.0-git/lib/rack/lock.rb:11:in `synchronize'
+/home/alec/passenger/vendor/rack-1.0.0-git/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+/home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+/home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+/home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+/home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+/home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+/home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+/home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+/home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+/home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+/home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+/home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+/home/alec/passenger/bin/passenger-spawn-server:61
+
+ActionView::TemplateError (compile error
+/home/alec/dotink-cms/app/views/home/index.html.erb:3: syntax error, unexpected ':', expecting ')'
+...at(( link_to "Your Sections" :sections ).to_s); @output_buff...
+                              ^) on line #3 of app/views/home/index.html.erb:
+1: <h1>This is your homepage!!!</h1>
+2: <p>Your articles will appear somewhere here</p>
+3: <%= link_to "Your Sections" :sections %>
+
+    app/views/home/index.html.erb:7:in `compile!'
+    /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+    /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (22.2ms)
+Rendered rescues/_request_and_response (7.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 168.229.28.69 at 2009-11-11 09:22:22) [GET]
+Rendering home/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
+
+
+Processing SectionsController#index (for 168.229.28.69 at 2009-11-11 09:22:26) [GET]
+  [4;36;1mSection Load (0.3ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/sections]
+
+
+Processing HomeController#index (for 168.229.28.69 at 2009-11-11 09:22:57) [GET]
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
+
+
+Processing HomeController#index (for 168.229.28.69 at 2009-11-11 09:23:14) [GET]
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
