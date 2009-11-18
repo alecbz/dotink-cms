@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Arclite</title>
+  <style type="text/css">
+   @import "style.css";
+   @import "options/header-default.css";
+   @import "options/content-default.css";
+   @import "options/side-default.css";
+  </style>
+
+  <!--[if lte IE 6]>
+   <style type="text/css" media="all">@import "ie6.css";</style>
+  <![endif]-->
+
+ <script src="js/jquery.js" type="text/javascript"></script>
+ <script src="js/jquery.arclite.js" type="text/javascript"></script>
+
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+
+
+<body>
+ <!-- page -->
+ <div id="page" class="with-sidebar">
+  <div id="header-wrap">
+   <div id="header" class="block-content">
+     <div id="pagetitle">
+      <h1 class="logo"><a href="#">Arclite</a></h1>
+      <h4>Just another CSS theme :)</h4>
+      <div class="clear"></div>
+
+      <!-- search form -->
+      <div class="search-block">
+        <div class="searchform-wrap">
+          <form method="get" id="searchform" action="#">
+           <fieldset>
+            <input type="text" name="s" id="searchbox" class="searchfield" value="Search" onfocus="if(this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+            <input type="submit" value="Go" class="go" />
+           </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- /search form -->
+
+     </div>
+     <!-- main navigation -->
+     <div id="nav-wrap1">
+      <div id="nav-wrap2">
+        <ul id="nav">
+         <li><a href="index-default.html" class="fadeThis"><span>Default style</span></a></li>
+         <li><a href="#" class="fadeThis"><span>Layout</span></a>
+           <ul>
+            <li><a href="index-imageless.html" class="fadeThis"><span>Imageless layout</span></a></li>
+            <li><a href="index-nosidebar.html" class="fadeThis"><span>No sidebar</span></a></li>
+            <li><a href="index-3col.html" class="fadeThis"><span>3-column layout</span></a></li>
+            <li><a href="index-leftsidebar.html" class="fadeThis"><span>Sidebar to the left</span></a></li>
+           </ul>
+         </li>
+         <li><a href="#" class="fadeThis"><span>Background variations</span></a>
+           <ul>
+            <li><a href="index-var1.html" class="fadeThis"><span>Burning</span></a></li>
+            <li><a href="index-var2.html" class="fadeThis"><span>Wood</span></a></li>
+            <li><a href="index-var3.html" class="fadeThis"><span>Wall</span></a></li>
+            <li><a href="index-var4.html" class="fadeThis"><span>Field</span></a></li>
+           </ul>
+         </li>
+         <li><a href="#" class="fadeThis"><span>More color variations</span></a>
+           <ul>
+            <li><a href="index-var7.html" class="fadeThis"><span>Green</span></a></li>
+            <li><a href="index-var6.html" class="fadeThis"><span>Red</span></a></li>
+            <li><a href="index-var5.html" class="fadeThis"><span>Blue</span></a></li>
+            <li><a href="index-default.html" class="fadeThis"><span>Brown (Default)</span></a>
+              <ul>
+               <li><a href="#" class="fadeThis"><span>Just testing subs</span></a></li>
+               <li><a href="#" class="fadeThis"><span>Another sub-menu...</span></a></li>
+              </ul>
+            </li>
+           </ul>
+         </li>
+        </ul>
+      </div>
+     </div>
+     <!-- /main navigation -->
+
+   </div>
+
+
+
+   <div id="main-wrap1">
+    <div id="main-wrap2">
+     <div id="main" class="block-content">
+      <div class="mask-main rightdiv">
+       <div class="mask-left">
+        <div class="col1">
+          <div id="main-content">
+
+            <!-- post -->
+            <div class="post">
+             <div class="post-header">
+              <h3 class="post-title"><a href="#">Post entry test</a></h3>
+              <p class="post-date">
+               <span class="month">Aug</span>
+               <span class="day">14</span>
+              </p>
+              <p class="post-author">
+               <span class="info">posted by <a href="#">Mary Jane</a> in <a href="#">Uncategorized</a> | <a href="#" class="comments">24 Comments</a></span>
+              </p>
+             </div>
+             <div class="post-content clearfix">
+               <p class="alignleft"><a href="http://farm2.static.flickr.com/1358/1043313548_b898b76ae1_b.jpg"><img src="http://farm2.static.flickr.com/1358/1043313548_b898b76ae1_m.jpg" alt="Letters from Iwo Jima" /></a></p>
+               <p>
+               The average solar cycle lasts for eleven years. The cycle includes a minimum of solar activity and a maximum. The sun is unusually quiet right now and has been for some time but there should be an increase in solar activity at some point in the near future.</p><p>
+      The best current scientific estimate for the next solar maximum is 2012. If this estimate is correct, there is still a few years to try and prevent the potential of a future global disaster. A disaster that would begin on the surface of the sun and could end with tragedy on earth.
+      The surface of the sun is a mass of plasma that contains highly charg</p>
+               <p class="tags"> Tags: <a href="#">2012</a> <a href="#">Solar Flare</a></p>
+             </div>
+            </div>
+            <!-- /post -->
+
+
+
+
+            <h3 class="comments">Comments</h3>
+            <ul id="comments">
+
+             <!-- comment -->
+             <li class="comment with-avatar">
+              <div class="comment-mask">
+               <div class="comment-main">
+                <div class="comment-wrap1">
+                 <div class="comment-wrap2">
+                  <div class="comment-head tiptrigger"><p>written by <a href="#">Sandy</a> on 16th April 2009, at 14:20</p><p class="controls tip"><a href="#" class="quote"><span>Quote</span></a><a href="#" class="reply"><span>Reply</span></a></p></div>
+                  <div class="comment-body clearfix">
+                   <div class="avatar">
+                    <img src="avatar-example.jpg" title="avatar" alt="avatar" />
+                  </div>
+                   <p>just a test comment with avatar</p><p>The average solar cycle lasts for eleven years. The cycle includes a minimum of solar activity and a maximum. The sun is unusually quiet right now and has been for some time but there should be an increase in solar activity at some point in the near future.</p></div>
+
+                  <!-- nested comment -->
+                  <ul>
+                   <!-- comment -->
+                   <li class="comment with-avatar">
+                    <div class="comment-mask">
+                     <div class="comment-main">
+                      <div class="comment-wrap1">
+                       <div class="comment-wrap2">
+                        <div class="comment-head tiptrigger"><p>written by <a href="#">Sandy</a> on 16th April 2009, at 14:20</p><p class="controls tip"><a href="#" class="quote"><span>Quote</span></a><a href="#" class="reply"><span>Reply</span></a></p></div>
+                        <div class="comment-body clearfix">
+                         <div class="avatar">
+                          <img src="avatar-example.jpg" title="avatar" alt="avatar" />
+                         </div>
+                         <p>testing reply...</p>
+                         <p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+          <p>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+                         </div>
+                       </div>
+
+
+                      </div>
+
+                     </div>
+                    </div>
+                   </li>
+                   <!-- /comment -->
+                  </ul>
+                  <!-- /nested comment -->
+
+                 </div>
+                </div>
+
+
+                </div>
+              </div>
+             </li>
+             <!-- /comment -->
+
+
+             <!-- comment -->
+             <li class="comment">
+              <div class="comment-mask">
+               <div class="comment-main">
+                <div class="comment-wrap1">
+                 <div class="comment-wrap2">
+                  <div class="comment-head tiptrigger"><p>written by <a href="#">Sandy</a> on 16th April 2009, at 14:20</p><p class="controls tip"><a href="#" class="quote"><span>Quote</span></a><a href="#" class="reply"><span>Reply</span></a></p></div>
+                  <div class="comment-body clearfix"><p>just a test comment without avatars <a href="#">link</a></p></div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </li>
+             <!-- /comment -->
+
+            </ul>
+
+
+          <p>The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
+          <hr />
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+          <p><small><a href="#wrapper">[top]</a></small></p>
+          <hr />
+          <h2 id="paragraph">Paragraph</h2>
+          <p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+          <p>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+          <p><small><a href="#wrapper">[top]</a></small></p>
+          <hr />
+          <h2 id="list_types">List Types</h2>
+          <h3>Definition List</h3>
+          <dl>
+          <dt>Definition List Title</dt>
+          <dd>This is a definition list division.</dd>
+          </dl>
+          <h3>Ordered List</h3>
+          <ol>
+          <li>List Item 1</li>
+          <li>List Item 2</li>
+          <li>List Item 3</li>
+          </ol>
+          <h3>Unordered List</h3>
+          <ul>
+          <li>List Item 1</li>
+          <li>List Item 2</li>
+          <li>List Item 3</li>
+          </ul>
+          <p><small><a href="#wrapper">[top]</a></small></p>
+          <hr />
+          <h2 id="form_elements">Forms</h2>
+          <form action="#">
+          <fieldset><br />
+          <legend>Legend</legend>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
+          <h2>Form Element</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.</p>
+          <p><label>Text Field:</label></p>
+          <input type="text" id="text_field" />
+          <p><label>Text Area:</label></p>
+          <textarea rows="5" cols="40" id="text_area"></textarea>
+
+          <p><label>Select Element:</label></p>
+          <select name="select_element">
+          			<optgroup label="Option Group 1">
+          				<option value="1">Option 1</option>
+          				<option value="2">Option 2</option>
+          				<option value="3">Option 3</option>
+          			</optgroup>
+          			<optgroup label="Option Group 2">
+          				<option value="1">Option 1</option>
+          				<option value="2">Option 2</option>
+          				<option value="3">Option 3</option>
+          			</optgroup>
+          		</select>
+
+          <p><label>Radio Buttons:</label></p>
+          <input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1<br/>
+          <input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2<br/>
+          <input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3<br/>
+
+          <p><label>Checkboxes:</label></p>
+          <input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1<br/>
+          <input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Radio 2<br/>
+          <input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3<br/>
+
+          <p><label>Password:</label></p>
+          <input type="password" class="password" name="password" />
+          <p><label>File Input:</label></p>
+          <input type="file" class="file" name="file" />
+
+          <p>
+          <input class="button" type="reset" value="Clear" />
+          <input class="button" type="submit" value="Submit" /></p>
+          </fieldset>
+          </form>
+          <p><small><a href="#wrapper">[top]</a></small></p>
+          <hr />
+          <h2 id="tables">Tables</h2>
+          <table cellspacing="0" cellpadding="0">
+          <tr>
+          <th>Table Header 1</th>
+          <th>Table Header 2</th>
+          <th>Table Header 3</th>
+          </tr>
+          <tr>
+          <td>Division 1</td>
+          <td>Division 2</td>
+          <td>Division 3</td>
+          </tr>
+          <tr class="even">
+          <td>Division 1</td>
+          <td>Division 2</td>
+          <td>Division 3</td>
+          </tr>
+          <tr>
+          <td>Division 1</td>
+          <td>Division 2</td>
+          <td>Division 3</td>
+          </tr>
+          </table>
+          <p><small><a href="#wrapper">[top]</a></small></p>
+          <hr />
+          <h2 id="misc">Misc Stuff - abbr, acronym, pre, code, sub, sup, etc.</h2>
+          <p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
+          <pre>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus.
+          Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
+          Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor.
+          Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym>
+          Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+          <abbr title="Avenue">AVE</abbr>
+          </pre>
+          <blockquote><p>
+          	&#8220;This stylesheet is going to help so freaking much.&#8221; <br />-Blockquote
+          </p></blockquote>
+          <p><small><a href="#wrapper">[top]</a></small></p>
+          <!-- End of Sample Content -->
+
+         </div>
+
+         </div>
+    	<div class="col2">
+
+          <ul id="sidebar">
+           <li class="block">
+            <!-- categories -->
+            <ul class="menu">
+             <li class="cat-item trigger"><a class="fadeThis" href="#">Example category</a><a href="#" class="rss tip"></a></li>
+             <li class="cat-item trigger"><a class="fadeThis" href="#">With subcategories</a><a href="#" class="rss tip"></a>
+               <ul>
+                <li><a href="#">Subcategory</a></li>
+                <li><a href="#">Going to level 3</a>
+                  <ul>
+                    <li><a href="#">Blah blah</a></li>
+                  </ul>
+                </li>
+               </ul>
+             </li>
+             <li class="cat-item trigger"><a class="fadeThis" href="#">Another category</a><a href="#" class="rss tip"></a></li>
+             <li class="cat-item trigger"><a class="fadeThis" href="#">Testing long title text category entry...</a><a href="#" class="rss tip"></a></li>
+             <li class="cat-item trigger"><a class="fadeThis" href="#">Uncategorized</a><a href="#" class="rss tip"></a></li>
+            </ul>
+            <!-- /categories -->
+           </li>
+
+           <li class="block">
+
+            <!-- box -->
+            <div class="box">
+             <div class="titlewrap"><h4><span>Box title</span></h4></div>
+
+             <div class="wrapleft">
+              <div class="wrapright">
+               <div class="tr">
+                <div class="bl">
+                 <div class="tl">
+                  <div class="br the-content">
+                    <p>Content goes here<br />
+                    Minimum height and width - 64/64px</p>
+                    <p>The average solar cycle lasts for eleven years. The cycle includes a minimum of solar activity and a maximum. The sun is unusually quiet right now and has been for some time but there should be an increase in solar activity at some point in the near future.</p>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+
+            </div>
+            <!-- /box -->
+
+           </li>
+
+          </ul>
+
+        </div>
+       </div>
+      </div>
+      <div class="clear-content"></div>
+     </div>
+
+
+    </div>
+   </div>
+
+  </div>
+
+ <!-- footer -->
+ <div id="footer">
+  <div class="block-content">
+     <div class="copyright">
+       Arclite theme by <a href="http://digitalnature.ro/projects/arclite">digitalnature</a> | Validate <a href="http://validator.w3.org/check/referer">XHTML 1.1</a>
+     </div>
+  </div>
+ </div>
+ <!-- /footer -->
+
+ </div>
+ <!-- /page -->
+
+ <script type="text/javascript">
+  /* <![CDATA[ */
+    var isIE6 = false; /* <- do not change! */
+    var isIE = false;  /* <- do not change! */
+    var lightbox = 1;  /* lightbox on/off ? */
+  /* ]]> */
+ </script>
+ <!--[if lte IE 6]> <script type="text/javascript"> isIE6 = true; isIE = true; </script> <![endif]-->
+ <!--[if gte IE 7]> <script type="text/javascript"> isIE = true; </script> <![endif]-->
+
+</body>
+
+</html>
