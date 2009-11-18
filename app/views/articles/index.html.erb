@@ -52,7 +52,7 @@
         <ul id="nav">
          <li><%= link_to '<span>Articles</span>', articles_path, :class => "fadeThis" %>
 	   <ul>
-	     <% for i in @latest_articles %>
+	     <% for i in @latest_articles do %>
 	     <li><%= link_to i.title, i, :class => "fadeThis" %></li>
 	     <% end %>
 	   </ul>
