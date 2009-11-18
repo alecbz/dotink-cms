@@ -84,7 +84,7 @@
 		  <span class="day"><%= Time.now.day %></span>
 		</p>
 		<p class="post-author">
-		  <span class="info">posted by <%=h link_to article.author, "#" %> in <%=h link_to article.category, "#" %> </span>
+		  <span class="info">posted by <%= link_to article.author, "#" %> in <%= link_to article.category, "#" %> </span>
 		</p>
               </div>
               <div class="post-content clearfix">
