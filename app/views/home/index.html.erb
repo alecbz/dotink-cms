@@ -50,7 +50,12 @@
      <div id="nav-wrap1">
       <div id="nav-wrap2">
         <ul id="nav">
-         <li><%= link_to '<span>Articles</span>', :class => "fadeThis", :action => articles_path %></li>
+         <li><%= link_to '<span>Articles</span>', articles_path %>
+	   <ul>
+	     <% for i in @articles %>
+	     <li><%= link_to <%= i.title %>, articles_path(i) %>
+	   </ul>
+	 </li>
          <li><a href="#" class="fadeThis"><span>Layout</span></a>
            <ul>
             <li><a href="index-imageless.html" class="fadeThis"><span>Imageless layout</span></a></li>
