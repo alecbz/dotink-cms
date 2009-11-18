@@ -1109,3 +1109,403 @@ Completed in 6ms (View: 4, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cm
 Processing HomeController#index (for 168.229.28.69 at 2009-11-18 09:49:22) [GET]
 Rendering home/index
 Completed in 23ms (View: 21, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
+
+
+Processing HomeController#index (for 168.229.28.69 at 2009-11-18 09:51:24) [GET]
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
+
+
+Processing HomeController#index (for 168.229.28.69 at 2009-11-18 09:51:24) [GET]
+Rendering home/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
+
+
+Processing SectionsController#index (for 168.229.28.69 at 2009-11-18 09:53:29) [GET]
+  [4;36;1mSection Load (11.8ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 100ms (View: 60, DB: 12) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/sections]
+
+
+Processing ArticlesController#index (for 168.229.28.69 at 2009-11-18 09:55:55) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: articles: SELECT * FROM "articles" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: articles: SELECT * FROM "articles" ):
+  app/controllers/articles_controller.rb:5:in `index'
+  /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+  /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+  /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (24.8ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSections (20091104141236)
+Migrating to CreateCategories (20091104151308)
+Migrating to CreateArticles (20091118145541)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "author" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091118145541')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sections")[0m
+
+
+Processing ArticlesController#index (for 168.229.28.69 at 2009-11-18 09:56:11) [GET]
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles]
+
+
+Processing ArticlesController#new (for 168.229.28.69 at 2009-11-18 09:56:16) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+
+ActionView::TemplateError (undefined method `category' for #<Article:0x7fb2ba29c9c0>) on line #20 of app/views/articles/new.html.erb:
+17:   </p>
+18:   <p>
+19:     <%= f.label :category %><br />
+20:     <%= f.text_field :category %>
+21:   </p>
+22:   <p>
+23:     <%= f.submit 'Create' %>
+
+    app/views/articles/new.html.erb:20
+    app/views/articles/new.html.erb:3
+    app/controllers/articles_controller.rb:29:in `new'
+    /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+    /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (73.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 168.229.28.69 at 2009-11-18 09:57:31) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/new]
+
+
+Processing ArticlesController#new (for 168.229.28.69 at 2009-11-18 10:02:22) [GET]
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map) on line #20 of app/views/articles/new.html.erb:
+17:   </p>
+18:   <p>
+19:     <%= f.label :category %><br />
+20:   <%= select("category","id",@categories.map { |a| [a.name, a.id] }) %>
+21:   </p>
+22:   <p>
+23:     <%= f.submit 'Create' %>
+
+    app/views/articles/new.html.erb:20
+    app/views/articles/new.html.erb:3
+    app/controllers/articles_controller.rb:30:in `new'
+    /home/alec/passenger/lib/phusion_passenger/rack/request_handler.rb:95:in `process_request'
+    /home/alec/passenger/lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:378:in `start_request_handler'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:336:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/utils.rb:183:in `safe_fork'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:334:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:163:in `start'
+    /home/alec/passenger/lib/phusion_passenger/railz/application_spawner.rb:213:in `start'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    /home/alec/passenger/lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (68.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 168.229.28.69 at 2009-11-18 10:03:22) [GET]
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 18ms (View: 8, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/new]
+
+
+Processing CategoriesController#index (for 168.229.28.69 at 2009-11-18 10:03:39) [GET]
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mSection Load (0.1ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/categories]
+
+
+Processing CategoriesController#new (for 168.229.28.69 at 2009-11-18 10:03:43) [GET]
+  [4;36;1mSection Load (0.3ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/categories/new]
+
+
+Processing CategoriesController#create (for 168.229.28.69 at 2009-11-18 10:03:53) [POST]
+  Parameters: {"section"=>{"id"=>"2"}, "category"=>{"name"=>"Alec's second category"}, "commit"=>"Create", "authenticity_token"=>"6ep3aRTze+NgdNTXKRiDbjpFFzWDITvcoon5tzP/2k0="}
+  [4;35;1mSection Load (0.1ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+  [4;36;1mCategory Create (0.3ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "section_id", "updated_at") VALUES('Alec''s second category', '2009-11-18 15:03:53', 2, '2009-11-18 15:03:53')[0m
+Redirected to http://umbraserv.no-ip.org/dotink-cms/categories/4
+Completed in 44ms (DB: 0) | 302 Found [http://umbraserv.no-ip.org/dotink-cms/categories]
+
+
+Processing CategoriesController#show (for 168.229.28.69 at 2009-11-18 10:03:53) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/categories/4]
+
+
+Processing CategoriesController#index (for 168.229.28.69 at 2009-11-18 10:03:54) [GET]
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mSection Load (0.1ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/categories]
+
+
+Processing ArticlesController#index (for 168.229.28.69 at 2009-11-18 10:03:58) [GET]
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles]
+
+
+Processing ArticlesController#new (for 168.229.28.69 at 2009-11-18 10:04:06) [GET]
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/new]
+
+
+Processing ArticlesController#create (for 168.229.28.69 at 2009-11-18 10:04:45) [POST]
+  Parameters: {"article"=>{"body"=>"O hai. On teh first day, teh ceiling cat...", "author"=>"Alec Benzer", "title"=>"This is an Article"}, "category"=>{"id"=>"4"}, "commit"=>"Create", "authenticity_token"=>"6ep3aRTze+NgdNTXKRiDbjpFFzWDITvcoon5tzP/2k0="}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author", "body", "updated_at") VALUES('2009-11-18 15:04:45', 'This is an Article', 'Alec Benzer', 'O hai. On teh first day, teh ceiling cat...', '2009-11-18 15:04:45')[0m
+Redirected to http://umbraserv.no-ip.org/dotink-cms/articles/1
+Completed in 16ms (DB: 0) | 302 Found [http://umbraserv.no-ip.org/dotink-cms/articles]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:04:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#index (for 168.229.28.69 at 2009-11-18 10:04:48) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:04:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
+
+
+Processing ArticlesController#show (for 168.229.28.69 at 2009-11-18 10:05:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/articles/1]
