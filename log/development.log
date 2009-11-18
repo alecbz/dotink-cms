@@ -1104,3 +1104,8 @@ Completed in 6ms (View: 4, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cm
 Processing HomeController#index (for 168.229.28.69 at 2009-11-11 09:23:14) [GET]
 Rendering home/index
 Completed in 6ms (View: 4, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
+
+
+Processing HomeController#index (for 168.229.28.69 at 2009-11-18 09:49:22) [GET]
+Rendering home/index
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://umbraserv.no-ip.org/dotink-cms/]
