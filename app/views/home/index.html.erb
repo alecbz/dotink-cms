@@ -53,7 +53,7 @@
          <li><%= link_to '<span>Articles</span>', articles_path %>
 	   <ul>
 	     <% for i in @articles %>
-	     <li><%= link_to i.title, { :action => i, :class => 'fadeThis'} %></li>
+	     <li><%= link_to i.title, i %></li>
 	     <% end %>
 	   </ul>
 	 </li>
