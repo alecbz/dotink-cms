@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @articles = Article.find(:all)
+    @latest_articles = Article.find(:all, :order => 'created_at DESC', :limit => 5)
   end
 
 end
