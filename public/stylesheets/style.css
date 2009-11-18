@@ -24,12 +24,12 @@
 /* try to use custom fonts trough css3 (opera 10+, safari 3.1+ and ff 3.5+) */
 @font-face {
   font-family: "Union";
-  src: url("fonts/union.ttf") format("truetype");
+  src: url("/fonts/union.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Share";
-  src: url("fonts/share.ttf") format("truetype");
+  src: url("/fonts/share.ttf") format("truetype");
 }
 
 
@@ -136,7 +136,7 @@ table td, table th{
 }
 
 table th{
-  background: #ab967e url(images/table-header.gif) repeat-x left top;
+  background: #ab967e url(/images/table-header.gif) repeat-x left top;
   color: #fff;
   text-transform: uppercase;
   font-weight: normal;
@@ -259,7 +259,7 @@ blockquote{
   border: 1px dotted #937d68;
   font-style: italic;
   color: #937d68;
-  background: #fff url(images/blockquote.png) no-repeat 4px top;
+  background: #fff url(/images/blockquote.png) no-repeat 4px top;
 }
 
 blockquote p{
@@ -423,14 +423,14 @@ blockquote p{
 
 /* search */
 .search-block{
-  background: transparent url(images/search-bg.png) no-repeat left top;
+  background: transparent url(/images/search-bg.png) no-repeat left top;
   position: absolute;
   right: 2em;
   bottom: 1em;
 }
 
 .search-block .searchform-wrap{
-  background: transparent url(images/search-go.png) no-repeat right top;
+  background: transparent url(/images/search-go.png) no-repeat right top;
   width: 146px;
   height: 30px;
 }
@@ -467,7 +467,7 @@ blockquote p{
 /* main navigation */
 
 #nav-wrap1{
-  background: transparent url(images/nav-left.png) no-repeat left top;
+  background: transparent url(/images/nav-left.png) no-repeat left top;
   padding-left: 25px;
   position: absolute;
   z-index: 3;
@@ -477,7 +477,7 @@ blockquote p{
 }
 
 #nav-wrap2{
-  background: transparent url(images/nav-bg.png) no-repeat right top;
+  background: transparent url(/images/nav-bg.png) no-repeat right top;
   padding-right: 25px;
   height: 64px;
   float: left;
@@ -490,7 +490,7 @@ ul#nav, ul#nav li{
 }
 
 ul#nav{
-  background: transparent url(images/nav-div.png) no-repeat right top;
+  background: transparent url(/images/nav-div.png) no-repeat right top;
   padding-right: 2px;
   display: block;
   height: 64px;
@@ -501,7 +501,7 @@ ul#nav li{
   display:inline;
   float: left;
   position: relative;
-  background: transparent url(images/nav-div.png) no-repeat left top;
+  background: transparent url(/images/nav-div.png) no-repeat left top;
   padding-left: 2px;
 }
 
@@ -536,7 +536,7 @@ ul#nav .fadeThis span.hover {
   display: block;
   height: 100%;
   width: 100%;
-  background: transparent url(images/nav-active.png) repeat-x left top;
+  background: transparent url(/images/nav-active.png) repeat-x left top;
   z-index: -1;
   margin: 0;
   padding: 0;
@@ -553,7 +553,7 @@ ul#nav li a span{
 
 ul#nav ul {
   position: absolute;
-  background: #f7f5ef url(images/side-menu-active.png) repeat-x left bottom;
+  background: #f7f5ef url(/images/side-menu-active.png) repeat-x left bottom;
   display: none;
   width:255px;
   top: 36px;
@@ -718,7 +718,7 @@ h2.post-title{
   text-align: center;
   float: left;
   line-height: 100%;
-  background: #fff url(images/date-bg.png) no-repeat left bottom;
+  background: #fff url(/images/date-bg.png) no-repeat left bottom;
   border: 1px solid #fff;
 }
 
@@ -744,7 +744,7 @@ h2.post-title{
 }
 
 .post p.post-author{
-  background: transparent url(images/post-info.png) no-repeat left top;
+  background: transparent url(/images/post-info.png) no-repeat left top;
   margin: 0 0 0 43px;
   padding: 0 12px;
   font-size: 110%;
@@ -769,7 +769,7 @@ h2.post-title{
 
 /* tags */
 .post p.tags{
-  background: transparent url(images/tag.gif) no-repeat left top;
+  background: transparent url(/images/tag.gif) no-repeat left top;
   font-size: 80%;
   color: #a8937b;
   padding: 0 0 0 13px;
@@ -839,7 +839,7 @@ ul#comments li.comment li.comment{
 
 .comment-mask{
   display: block;
-  background: transparent url(images/comment-shadow.png) no-repeat right bottom;
+  background: transparent url(/images/comment-shadow.png) no-repeat right bottom;
   padding: 12px 6px 6px 0px;
   position: relative;
 }
@@ -851,7 +851,7 @@ ul#comments li.comment li.comment{
 .comment-mask .avatar{
   width: 90px;
   height: 90px;
-  background: transparent url(images/avatar.png) no-repeat center center;
+  background: transparent url(/images/avatar.png) no-repeat center center;
   float: left;
   position: relative;
 }
@@ -870,15 +870,15 @@ ul#comments li.comment li.comment{
 }
 
 .comment-wrap1{
-  background: transparent url(images/comment-bg-right.png) no-repeat right bottom;
+  background: transparent url(/images/comment-bg-right.png) no-repeat right bottom;
 }
 
 .comment-wrap2{
-  background: transparent url(images/comment-bg-left.png) no-repeat left bottom;
+  background: transparent url(/images/comment-bg-left.png) no-repeat left bottom;
 }
 
 .comment-head{
-  background: #96816d url(images/comment-head.png) repeat-x left bottom;
+  background: #96816d url(/images/comment-head.png) repeat-x left bottom;
   color: #fff;
   display: block;
   width: 100%; /* IE 7 fix */
@@ -890,7 +890,7 @@ ul#comments li.comment li.comment{
 }
 
 .admincomment .comment-head{
-  background: #125f9f url(images/comment-head-admin.png) repeat-x left bottom;
+  background: #125f9f url(/images/comment-head-admin.png) repeat-x left bottom;
 }
 
 .comment-head p{
@@ -1002,7 +1002,7 @@ ul.menu{
 }
 
 ul.menu li{
-  background: transparent url(images/div-h.png) repeat-x left bottom;
+  background: transparent url(/images/div-h.png) repeat-x left bottom;
   display: block;
   padding: 0 0 3px 0;
   width: 100%;
@@ -1034,7 +1034,7 @@ ul.menu .fadeThis span.hover {
   display: block;
   height: 100%;
   width: 100%;
-  background: #f7f5ef url(images/side-menu-active.png) repeat-x left bottom;
+  background: #f7f5ef url(/images/side-menu-active.png) repeat-x left bottom;
   z-index: -1;
 }
 
@@ -1074,7 +1074,7 @@ ul.menu li.cat-item a.rss{
   position: absolute;
   padding:0;
   display: none;
-  background: transparent url(images/side-menu-rss.png) no-repeat center center;
+  background: transparent url(/images/side-menu-rss.png) no-repeat center center;
   width: 24px;
   height: 22px;
   top: 0px;
@@ -1103,7 +1103,7 @@ ul.menu li li .fadeThis span.hover {
 /* box */
 
 .box{
-  background: transparent url(images/box-shadow.png) no-repeat bottom right;
+  background: transparent url(/images/box-shadow.png) no-repeat bottom right;
   padding: 8px 12px;
   margin: 2em 0 1em;
 }
@@ -1142,13 +1142,13 @@ ul.menu li li .fadeThis span.hover {
 }
 
 
-.box .wrapleft{ background: #fff url(images/box-left-bg.png) repeat-y top left; }
-.box .wrapright{ background: transparent url(images/box-right-bg.png) repeat-y top right; }
+.box .wrapleft{ background: #fff url(/images/box-left-bg.png) repeat-y top left; }
+.box .wrapright{ background: transparent url(/images/box-right-bg.png) repeat-y top right; }
 
-.box .bl{ background: transparent url(images/box-bl.png) no-repeat bottom left; }
-.box .tl{ background: transparent url(images/box-tl.png) no-repeat top left; }
-.box .br{ background: transparent url(images/box-br.png) no-repeat bottom right; }
-.box .tr{ background: transparent url(images/box-tr.png) no-repeat top right; }
+.box .bl{ background: transparent url(/images/box-bl.png) no-repeat bottom left; }
+.box .tl{ background: transparent url(/images/box-tl.png) no-repeat top left; }
+.box .br{ background: transparent url(/images/box-br.png) no-repeat bottom right; }
+.box .tr{ background: transparent url(/images/box-tr.png) no-repeat top right; }
 
 .box .the-content{
   padding: .4em 1em .6em 1em;
@@ -1172,7 +1172,7 @@ ul.menu li li .fadeThis span.hover {
 }
 
 #footer a.rss{
-  background: transparent url(images/rss.png) no-repeat left top;
+  background: transparent url(/images/rss.png) no-repeat left top;
   padding-left: 20px;
 }
 
@@ -1220,7 +1220,7 @@ ul#footer-widgets.widgetcount-6 li.widget{ width: 16%; }
 /* no point to add more than 6 widgets, unreadable */
 
 ul#footer-widgets h6.title{
-  background: transparent url(images/div-h2.gif) repeat-x left bottom;
+  background: transparent url(/images/div-h2.gif) repeat-x left bottom;
   padding: .1em .4em;
   font-style: italic;
 }
@@ -1240,7 +1240,7 @@ ul#footer-widgets li.widget li{
   list-style-type: none;
   padding: .2em .6em;
   display: block;
-  background: transparent url(images/div-h2.gif) repeat-x left bottom;
+  background: transparent url(/images/div-h2.gif) repeat-x left bottom;
   position: relative;
   margin-top: 1px;
 }
@@ -1324,7 +1324,7 @@ div.clear{ clear: both;height:1px;  }
 div#fancyoverlay{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;display:none;z-index:30;}
 div#fancywrap{text-align:left;}
 div#fancyloading{position:absolute;height:40px;width:40px;cursor:pointer;display:none;overflow:hidden;background:transparent;z-index:100;}
-div#fancyloading div{position:absolute;top:0;left:0;width:40px;height:480px;background:transparent url(images/loader.gif) no-repeat;}
+div#fancyloading div{position:absolute;top:0;left:0;width:40px;height:480px;background:transparent url(/images/loader.gif) no-repeat;}
 div#fancyloadingoverlay{position:absolute;background-color:#FFF;z-index:30;}
 div#fancyouter{position:absolute;top:0;left:0;z-index:90;padding:18px 18px 33px;margin:0;overflow:hidden;background:transparent;display:none;}
 div#fancyinner{position:relative;width:100%;height:100%;background-color:#eee;}
@@ -1337,8 +1337,8 @@ a#fancyleft,a#fancyright{position:absolute;bottom:0;height:100%;width:35%;cursor
 a#fancyleft{left:0;}
 a#fancyright{right:0;}
 span.fancyico{position:absolute;top:50%;margin-top:-15px;width:30px;height:42px;z-index:112;cursor:pointer;display:block;opacity:0.5;}
-span#fancyleftico{left:-9999px;background:transparent url(images/block-nav.png) no-repeat left top;}
-span#fancyrightico{right:-9999px;background:transparent url(images/block-nav.png) no-repeat right top;}
+span#fancyleftico{left:-9999px;background:transparent url(/images/block-nav.png) no-repeat left top;}
+span#fancyrightico{right:-9999px;background:transparent url(/images/block-nav.png) no-repeat right top;}
 a#fancyleft:hover{visibility:visible;}
 a#fancyright:hover{visibility:visible;}
 a#fancyleft:hover span{left:20px;}
