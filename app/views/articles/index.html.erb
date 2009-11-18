@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-  <title>Arclite</title>
+  <title>dotInk</title>
   <style type="text/css">
    @import "/stylesheets/style.css";
    @import "/options/header-default.css";
@@ -28,7 +28,7 @@
   <div id="header-wrap">
    <div id="header" class="block-content">
      <div id="pagetitle">
-      <h1 class="logo"><a href="#">dotInk</a></h1>
+      <h1 class="logo"><%= link_to "dotInk", :controller => "home", :action => "index" %></h1>
       <h4>The Ad Agency</h4>
       <div class="clear"></div>
 
@@ -102,32 +102,8 @@
     	<div class="col2">
 	  
           <ul id="sidebar">
-            <li class="block">
-              <!-- categories -->
-              <ul class="menu">
-		<li class="cat-item trigger"><a class="fadeThis" href="#">Example category</a><a href="#" class="rss tip"></a></li>
-		<li class="cat-item trigger"><a class="fadeThis" href="#">With subcategories</a><a href="#" class="rss tip"></a>
-		  <ul>
-                    <li><a href="#">Subcategory</a></li>
-                    <li><a href="#">Going to level 3</a>
-                      <ul>
-			<li><a href="#">Blah blah</a></li>
-                      </ul>
-                    </li>
-		  </ul>
-		</li>
-		<li class="cat-item trigger"><a class="fadeThis" href="#">Another category</a><a href="#" class="rss tip"></a></li>
-		<li class="cat-item trigger"><a class="fadeThis" href="#">Testing long title text category entry...</a><a href="#" class="rss tip"></a></li>
-		<li class="cat-item trigger"><a class="fadeThis" href="#">Uncategorized</a><a href="#" class="rss tip"></a></li>
-              </ul>
-              <!-- /categories -->
-            </li>
-	    
-            <li class="block">
-	      
-              <!-- box -->
               <div class="box">
-		<div class="titlewrap"><h4><span>Box title</span></h4></div>
+		<div class="titlewrap"><h4><span>Articles</span></h4></div>
 		
 		<div class="wrapleft">
 		  <div class="wrapright">
@@ -135,10 +111,8 @@
                       <div class="bl">
 			<div class="tl">
 			  <div class="br the-content">
-			    <p>Content goes here<br />
-			      Minimum height and width - 64/64px</p>
-			    <p>The average solar cycle lasts for eleven years. The cycle includes a minimum of solar activity and a maximum. The sun is unusually quiet right now and has been for some time but there should be an increase in solar activity at some point in the near future.</p>
-                  </div>
+			    <p><%= link_to "Write new article", :controller => "articles", :action => "new" %></p>
+               </div>
 			</div>
                       </div>
 		    </div>

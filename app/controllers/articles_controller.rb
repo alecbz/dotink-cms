@@ -27,6 +27,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new.xml
   def new
     @article = Article.new
+    @latest_articles = Article.find(:all, :order => 'created_at DESC', :limit => 5)
     @categories = Category.find(:all)
 
     respond_to do |format|
@@ -38,6 +39,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
+    @latest_articles = Article.find(:all, :order => 'created_at DESC', :limit => 5)
   end
 
   # POST /articles
