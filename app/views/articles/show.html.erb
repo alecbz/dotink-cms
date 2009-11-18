@@ -1,23 +1,192 @@
-<p>
-  <b>Title:</b>
-  <%=h @article.title %>
-</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
-<p>
-  <b>Author:</b>
-  <%=h @article.author %>
-</p>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
-<p>
-  <b>Body:</b>
-  <%=h @article.body %>
-</p>
+<head>
+  <title>Arclite</title>
+  <style type="text/css">
+   @import "/stylesheets/style.css";
+   @import "/options/header-default.css";
+   @import "/options/content-default.css";
+   @import "/options/side-default.css";
+  </style>
 
-<p>
-  <b>Category:</b>
-  <%=h @article.category %>
-</p>
+  <!--[if lte IE 6]>
+   <style type="text/css" media="all">@import "ie6.css";</style>
+  <![endif]-->
+
+ <script src="/javascripts/jquery.js" type="text/javascript"></script>
+ <script src="/javascripts/jquery.arclite.js" type="text/javascript"></script>
+
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
 
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<body>
+ <!-- page -->
+ <div id="page" class="with-sidebar">
+  <div id="header-wrap">
+   <div id="header" class="block-content">
+     <div id="pagetitle">
+      <h1 class="logo"><a href="#">dotInk</a></h1>
+      <h4>The Ad Agency</h4>
+      <div class="clear"></div>
+
+      <!-- search form -->
+      <div class="search-block">
+        <div class="searchform-wrap">
+          <form method="get" id="searchform" action="#">
+           <fieldset>
+            <input type="text" name="s" id="searchbox" class="searchfield" value="Search" onfocus="if(this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+            <input type="submit" value="Go" class="go" />
+           </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- /search form -->
+
+     </div>
+     <!-- main navigation -->
+     <div id="nav-wrap1">
+      <div id="nav-wrap2">
+        <ul id="nav">
+         <li><%= link_to '<span>Articles</span>', articles_path, :class => "fadeThis" %>
+	   <ul>
+	     <% for i in @latest_articles do %>
+	     <li><%= link_to i.title, i, :class => "fadeThis" %></li>
+	     <% end %>
+	   </ul>
+	 </li>
+        </ul>
+      </div>
+     </div>
+     <!-- /main navigation -->
+
+   </div>
+
+
+
+   <div id="main-wrap1">
+    <div id="main-wrap2">
+     <div id="main" class="block-content">
+      <div class="mask-main rightdiv">
+       <div class="mask-left">
+        <div class="col1">
+          <div id="main-content">
+
+            <!-- post -->
+            <div class="post">
+              <div class="post-header">
+		<h3 class="post-title"><a href="#"><%=h @article.title %></a></h3>
+		<p class="post-date">
+		  <span class="month"><%= Time.now.strftime("%B")[0..2] %></span>
+		  <span class="day"><%= Time.now.day %></span>
+		</p>
+		<p class="post-author">
+		  <span class="info">posted by <%= link_to @article.author, "#" %> in <%= link_to @article.category, "#" %> </span>
+		</p>
+              </div>
+              <div class="post-content clearfix">
+		<p>
+		  <%=h @article.body %>
+		</p>
+		<br />
+		<%= link_to 'Edit', edit_article_path(@article) %> | <%= link_to 'All Articles', articles_path %>
+	      </div>
+            </div>
+            <!-- /post -->
+	    
+	  </div>
+	  
+        </div>
+    	<div class="col2">
+	  
+          <ul id="sidebar">
+            <li class="block">
+              <!-- categories -->
+              <ul class="menu">
+		<li class="cat-item trigger"><a class="fadeThis" href="#">Example category</a><a href="#" class="rss tip"></a></li>
+		<li class="cat-item trigger"><a class="fadeThis" href="#">With subcategories</a><a href="#" class="rss tip"></a>
+		  <ul>
+                    <li><a href="#">Subcategory</a></li>
+                    <li><a href="#">Going to level 3</a>
+                      <ul>
+			<li><a href="#">Blah blah</a></li>
+                      </ul>
+                    </li>
+		  </ul>
+		</li>
+		<li class="cat-item trigger"><a class="fadeThis" href="#">Another category</a><a href="#" class="rss tip"></a></li>
+		<li class="cat-item trigger"><a class="fadeThis" href="#">Testing long title text category entry...</a><a href="#" class="rss tip"></a></li>
+		<li class="cat-item trigger"><a class="fadeThis" href="#">Uncategorized</a><a href="#" class="rss tip"></a></li>
+              </ul>
+              <!-- /categories -->
+            </li>
+	    
+            <li class="block">
+	      
+              <!-- box -->
+              <div class="box">
+		<div class="titlewrap"><h4><span>Box title</span></h4></div>
+		
+		<div class="wrapleft">
+		  <div class="wrapright">
+		    <div class="tr">
+                      <div class="bl">
+			<div class="tl">
+			  <div class="br the-content">
+			    <p>Content goes here<br />
+			      Minimum height and width - 64/64px</p>
+			    <p>The average solar cycle lasts for eleven years. The cycle includes a minimum of solar activity and a maximum. The sun is unusually quiet right now and has been for some time but there should be an increase in solar activity at some point in the near future.</p>
+                  </div>
+			</div>
+                      </div>
+		    </div>
+		  </div>
+		</div>
+		
+              </div>
+              <!-- /box -->
+	      
+            </li>
+	    
+          </ul>
+	  
+        </div>
+       </div>
+      </div>
+      <div class="clear-content"></div>
+     </div>
+     
+     
+    </div>
+   </div>
+   
+  </div>
+  
+  <!-- footer -->
+  <div id="footer">
+    <div class="block-content">
+      <div class="copyright">
+	Arclite theme by <a href="http://digitalnature.ro/projects/arclite">digitalnature</a> | Validate <a href="http://validator.w3.org/check/referer">XHTML 1.1</a>
+      </div>
+    </div>
+  </div>
+  <!-- /footer -->
+  
+ </div>
+ <!-- /page -->
+ 
+ <script type="text/javascript">
+   /* <![CDATA[ */
+    var isIE6 = false; /* <- do not change! */
+    var isIE = false;  /* <- do not change! */
+    var lightbox = 1;  /* lightbox on/off ? */
+  /* ]]> */
+ </script>
+ <!--[if lte IE 6]> <script type="text/javascript"> isIE6 = true; isIE = true; </script> <![endif]-->
+ <!--[if gte IE 7]> <script type="text/javascript"> isIE = true; </script> <![endif]-->
+ 
+</body>
+
+</html>
