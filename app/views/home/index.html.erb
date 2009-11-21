@@ -42,6 +42,12 @@
            </fieldset>
           </form>
         </div>
+		<p>
+		  <% form_tag('/articles/search') do %>
+		    <%= text_field_tag 'query' %>
+		    <%= submit_tag 'Search for articles' %>
+		  <% end %>
+		</p>
       </div>
       <!-- /search form -->
 

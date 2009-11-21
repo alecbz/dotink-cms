@@ -1,0 +1,3 @@
+<h2>Search result for term <em><%= @query %></em> resulted in <%= @total_hits %> hits</h2>
+<%= render :partial => 'post', :collection => @articles %>
+<%= will_paginate @articles, :params => {:query => @query} %>

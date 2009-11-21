@@ -88,4 +88,10 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def search
+    @query=params[:query] 
+    @total_hits = Article.total_hits(@query)
+    @articles = Article.paginate_with_ferret(@query, :page => params[:page], :per_page => 5)
+  end
 end
