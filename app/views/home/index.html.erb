@@ -38,7 +38,7 @@
           <form method="get" id="searchform" action="#">
            <fieldset>
             <input type="text" name="s" id="searchbox" class="searchfield" value="Search" onfocus="if(this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
-            <input type="submit" value="Go" class="go" onclick=<% @article.find_by_contents('s.value') %> />
+            <input type="submit" value="Go" class="go" />
            </fieldset>
           </form>
         </div>

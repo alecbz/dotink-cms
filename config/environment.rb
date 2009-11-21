@@ -21,6 +21,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   # config.gem "rubyist-aasm", :lib => "aasm", :source => "http://gem.github.com"
   config.gem 'acts_as_ferret'
+  config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -42,3 +43,4 @@ Rails::Initializer.run do |config|
 end
 require 'acts_as_ferret'
 ActsAsFerret.index_dir = "#{RAILS_ROOT}/tmp/index"
+require 'will_paginate'
