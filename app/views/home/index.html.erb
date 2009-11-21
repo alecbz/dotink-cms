@@ -34,14 +34,11 @@
 
       <!-- search form -->
       <div class="search-block">
-        <div class="searchform-wrap">
 			<p>
 			  <% form_tag('/articles/search') do %>
 			    <%= text_field_tag 'query' %>
-			    <%= submit_tag 'Search for articles' %>
 			  <% end %>
 			</p>
-        </div>
       </div>
       <!-- /search form -->
 

@@ -32,14 +32,11 @@
 
       <!-- search form -->
       <div class="search-block">
-        <div class="searchform-wrap">
-          <form method="get" id="searchform" action="#">
-           <fieldset>
-            <input type="text" name="s" id="searchbox" class="searchfield" value="Search" onfocus="if(this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
-            <input type="submit" value="Go" class="go" />
-           </fieldset>
-          </form>
-        </div>
+        	<p>
+			  <% form_tag('/articles/search') do %>
+			    <%= text_field_tag 'query' %>
+			  <% end %>
+			</p>
       </div>
       <!-- /search form -->
 

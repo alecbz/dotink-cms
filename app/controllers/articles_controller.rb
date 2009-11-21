@@ -90,6 +90,7 @@ class ArticlesController < ApplicationController
   end
   
   def search
+    @latest_articles = Article.find(:all, :order => 'created_at DESC', :limit => 5)
     @query=params[:query] 
     @total_hits = Article.total_hits(@query)
     @articles = Article.paginate_with_ferret(@query, :page => params[:page], :per_page => 5)

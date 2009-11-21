@@ -3564,3 +3564,2125 @@ Processing HomeController#index (for 127.0.0.1 at 2009-11-20 18:46:57) [GET]
   [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
 Rendering home/index
 Completed in 6ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/?s=reg]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 19:49:27) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 88ms (View: 61, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 19:49:29) [POST]
+  Parameters: {"commit"=>"Search for articles", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sd"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 51ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-20 19:49:40) [GET]
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 87ms (View: 79, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-11-20 19:49:41) [GET]
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCategory Load (10.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 55ms (View: 14, DB: 11) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-11-20 19:49:54) [POST]
+  Parameters: {"article"=>{"body"=>"this is a sample article i wrote to prove a point.", "author"=>"Mark fayngersh", "title"=>"Sample article"}, "category"=>{"id"=>"1"}, "commit"=>"Create", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0="}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mArticle Create (0.4ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author", "body", "updated_at", "category_id") VALUES('2009-11-21 00:49:54', 'Sample article', 'Mark fayngersh', 'this is a sample article i wrote to prove a point.', '2009-11-21 00:49:54', 1)[0m
+ferret_create/update: Article-7
+creating doc for class: Article-7
+Adding field title with value 'Sample article' to index
+Adding field author with value 'Mark fayngersh' to index
+Adding field body with value 'this is a sample article i wrote to prove a point.' to index
+Redirected to http://127.0.0.1:3000/articles/7
+Completed in 37ms (DB: 1) | 302 Found [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-20 19:49:54) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-20 19:49:55) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 107ms (View: 96, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 19:49:57) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 19:50:00) [POST]
+  Parameters: {"commit"=>"Search for articles", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+
+ActionView::TemplateError (Missing template articles/_article.erb in view path app/views) on line #2 of app/views/articles/search.html.erb:
+1: <h2>Search result for term <em><%= @query %></em> resulted in <%= @total_hits %> hits</h2>
+2: <%= render :partial => 'article', :collection => @articles %>
+3: <%= will_paginate @articles, :params => {:query => @query} %>
+
+    app/views/articles/search.html.erb:2
+
+Rendered rescues/_trace (46.8ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 19:50:39) [POST]
+  Parameters: {"commit"=>"Search for articles", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 19:50:43) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 19:50:44) [POST]
+  Parameters: {"commit"=>"Search for articles", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>""}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 19:50:48) [POST]
+  Parameters: {"commit"=>"Search for articles", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 19:51:24) [GET]
+  Parameters: {"id"=>"sample"}
+
+TypeError (wrong argument type nil (expected Data)):
+  ferret (0.11.6) lib/ferret/index.rb:768:in `search'
+  ferret (0.11.6) lib/ferret/index.rb:768:in `do_search'
+  ferret (0.11.6) lib/ferret/index.rb:339:in `search'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+  ferret (0.11.6) lib/ferret/index.rb:338:in `search'
+  /Library/Ruby/Gems/1.8/gems/acts_as_ferret-0.4.4/lib/local_index.rb:86:in `total_hits'
+  /Library/Ruby/Gems/1.8/gems/acts_as_ferret-0.4.4/lib/class_methods.rb:165:in `total_hits'
+  app/controllers/articles_controller.rb:94:in `search'
+
+Rendered rescues/_trace (106.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 19:51:30) [POST]
+  Parameters: {"commit"=>"Search for articles", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:02:56) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:02:57) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:02:59) [POST]
+  Parameters: {"commit"=>"Search for articles", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>""}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:03:24) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:03:27) [POST]
+  Parameters: {"commit"=>"Search", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"df"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:03:33) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 89ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:03:34) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"df"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:03:41) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:03:51) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:03:55) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-20 20:04:07) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-20 20:04:08) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:04:09) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:04:13) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sam"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 80ms (View: 1, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:06:19) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:07:15) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:07:18) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sam"}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 82ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:07:28) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:08:11) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:08:12) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.4ms)
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:08:15) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:09:43) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:09:44) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+
+ActionView::TemplateError (undefined method `title' for #<WillPaginate::Collection:0x103331428>) on line #1 of app/views/articles/_article.html.erb:
+1: <p><%= @articles.title %></p>
+
+    app/views/articles/_article.html.erb:1
+    app/views/articles/search.html.erb:2
+
+Rendered rescues/_trace (122.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:09:56) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.8ms)
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:10:06) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+
+ActionView::TemplateError (undefined method `instance_methods' for #<WillPaginate::Collection:0x103238918>) on line #1 of app/views/articles/_article.html.erb:
+1: <p><%= @articles.instance_methods%></p>
+
+    app/views/articles/_article.html.erb:1
+    app/views/articles/search.html.erb:2
+
+Rendered rescues/_trace (134.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:12:13) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.7ms)
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:12:15) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:12:17) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.1ms)
+Completed in 13ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:13:59) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.4ms)
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:14:01) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Completed in 16ms (View: 2, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:14:14) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Completed in 23ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:16:22) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.6ms)
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:16:45) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.5ms)
+Completed in 125ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:17:17) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.5ms)
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:17:19) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Completed in 16ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:17:23) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.2ms)
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:17:53) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Completed in 15ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:18:39) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:19:03) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.7ms)
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:19:06) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+
+ActionView::TemplateError (undefined local variable or method `articl' for #<ActionView::Base:0x10343dbf0>) on line #1 of app/views/articles/_article.html.erb:
+1: <p>The answer is <%= articl %></p>
+
+    app/views/articles/_article.html.erb:1
+    app/views/articles/search.html.erb:2
+
+Rendered rescues/_trace (133.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:19:13) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (2.0ms)
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:19:47) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+
+ActionView::TemplateError (undefined local variable or method `article' for #<ActionView::Base:0x103376c58>) on line #1 of app/views/articles/_search_results.html.erb:
+1: <p>The answer is <%= article.title %></p>
+
+    app/views/articles/_search_results.html.erb:1
+    app/views/articles/search.html.erb:2
+
+Rendered rescues/_trace (149.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:20:08) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+
+ActionView::TemplateError (undefined local variable or method `search_result' for #<ActionView::Base:0x103457208>) on line #1 of app/views/articles/_search_results.html.erb:
+1: <p>The answer is <%= search_result.title %></p>
+
+    app/views/articles/_search_results.html.erb:1
+    app/views/articles/search.html.erb:2
+
+Rendered rescues/_trace (134.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:20:10) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_search_results (2.4ms)
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:21:10) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #53 of app/views/articles/_article.html.erb:
+50:         <ul id="nav">
+51:          <li><%= link_to '<span>Articles</span>', articles_path, :class => "fadeThis" %>
+52: 	   <ul>
+53: 	     <% for i in @latest_articles do %>
+54: 	     <li><%= link_to i.title, i, :class => "fadeThis" %></li>
+55: 	     <% end %>
+56: 	   </ul>
+
+    app/views/articles/_article.html.erb:53
+    app/views/articles/search.html.erb:2
+
+Rendered rescues/_trace (131.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:21:39) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.5ms)
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:21:51) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (2.0ms)
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:21:56) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (2.1ms)
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:22:04) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 88ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-20 20:22:05) [GET]
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-11-20 20:22:06) [GET]
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-11-20 20:22:25) [POST]
+  Parameters: {"article"=>{"body"=>"mainly for ferret experimental purposes.", "author"=>"mark fayngersh", "title"=>"Second article post"}, "category"=>{"id"=>"1"}, "commit"=>"Create", "authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0="}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mArticle Create (0.4ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author", "body", "updated_at", "category_id") VALUES('2009-11-21 01:22:25', 'Second article post', 'mark fayngersh', 'mainly for ferret experimental purposes.', '2009-11-21 01:22:25', 1)[0m
+ferret_create/update: Article-8
+creating doc for class: Article-8
+Adding field title with value 'Second article post' to index
+Adding field author with value 'mark fayngersh' to index
+Adding field body with value 'mainly for ferret experimental purposes.' to index
+Redirected to http://127.0.0.1:3000/articles/8
+Completed in 25ms (DB: 1) | 302 Found [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-20 20:22:25) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 101ms (View: 91, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:22:27) [GET]
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:22:30) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mainly"}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.1ms)
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:22:36) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.1ms)
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:22:39) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.1ms)
+Rendered articles/_article (0.1ms)
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:23:42) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #106 of app/views/articles/_article.html.erb:
+103: 	      
+104:               <!-- box -->
+105:               <div class="box">
+106: 		<div class="titlewrap"><h4><span><%= @article.title %></span></h4></div>
+107: 		
+108: 		<div class="wrapleft">
+109: 		  <div class="wrapright">
+
+    app/views/articles/_article.html.erb:106
+    app/views/articles/search.html.erb:2
+
+Rendered rescues/_trace (49.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:23:57) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (12.9ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (2.7ms)
+Completed in 37ms (View: 21, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:25:17) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (10.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.1ms)
+Completed in 34ms (View: 18, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:27:25) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.3ms)
+Rendered articles/_article (0.1ms)
+Completed in 107ms (View: 92, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:27:36) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Rendered articles/_article (0.1ms)
+Completed in 28ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:28:05) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Rendered articles/_article (0.0ms)
+Completed in 29ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:28:12) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Rendered articles/_article (0.1ms)
+Completed in 27ms (View: 11, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:28:29) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Rendered articles/_article (0.1ms)
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:29:07) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Rendered articles/_article (0.0ms)
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:29:52) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Rendered articles/_article (0.0ms)
+Rendered articles/_article (0.0ms)
+Rendered articles/_article (0.1ms)
+Completed in 27ms (View: 11, DB: 3) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:30:45) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (7.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (0.9ms)
+Completed in 113ms (View: 98, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:31:15) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.1ms)
+Completed in 41ms (View: 26, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:31:17) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (6.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (0.8ms)
+Completed in 26ms (View: 12, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:31:49) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.0ms)
+Completed in 35ms (View: 19, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:32:40) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.5ms)
+Completed in 35ms (View: 20, DB: 3) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:32:55) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"mark"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.0ms)
+Completed in 33ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-20 20:33:04) [GET]
+  Parameters: {"id"=>"search", "s"=>"experimental"}
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=search):
+  app/controllers/articles_controller.rb:17:in `show'
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:33:15) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:33:18) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (6.4ms)
+Completed in 96ms (View: 10, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-11-20 20:33:23) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/articles/8/edit]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:33:27) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:34:12) [GET]
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:34:13) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 89ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:34:15) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:34:18) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.author) on line #9 of app/views/articles/_article.html.erb:
+6: <span class="day"><%= Time.now.day %></span>
+7: </p>
+8: <p class="post-author">
+9: <span class="info">posted by <%= link_to @rticle.author, "#" %> in <%= link_to article.category, "#" %> </span>
+10: </p>
+11:   </div>
+12:   <div class="post-content clearfix">
+
+    app/views/articles/_article.html.erb:9
+    app/views/articles/search.html.erb:76
+
+Rendered rescues/_trace (49.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:34:26) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (7.5ms)
+Completed in 31ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:34:58) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #29 of app/views/articles/_article.html.erb:
+26:       
+27:           <!-- box -->
+28:           <div class="box">
+29: 	<div class="titlewrap"><h4><span><%= @article.title %></span></h4></div>
+30: 	
+31: 	<div class="wrapleft">
+32: 	  <div class="wrapright">
+
+    app/views/articles/_article.html.erb:29
+    app/views/articles/search.html.erb:76
+
+Rendered rescues/_trace (50.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:35:05) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (7.7ms)
+Completed in 126ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:37:12) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.7ms)
+Completed in 32ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:38:21) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.0ms)
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-11-20 20:38:23) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles/7/edit]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:38:24) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:38:27) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (6.4ms)
+Completed in 92ms (View: 11, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-20 20:38:36) [GET]
+  Parameters: {"id"=>"search", "s"=>"article"}
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=search):
+  app/controllers/articles_controller.rb:17:in `show'
+
+Rendered rescues/_trace (33.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:38:39) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:38:41) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (7.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.1ms)
+Completed in 97ms (View: 85, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:38:58) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (10.1ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.6ms)
+Completed in 37ms (View: 22, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:39:04) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (1.2ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (9.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.8ms)
+Completed in 43ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:39:10) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (9.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.3ms)
+Completed in 36ms (View: 19, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:39:14) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (86.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.2ms)
+Completed in 112ms (View: 97, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:39:24) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (10.3ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.5ms)
+Completed in 36ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:39:32) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (6.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.1ms)
+Completed in 112ms (View: 11, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:39:34) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (9.5ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.4ms)
+Completed in 37ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:39:44) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (7.2ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.1ms)
+Completed in 29ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:39:51) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.5ms)
+Completed in 34ms (View: 18, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:39:56) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (5.5ms)
+Completed in 39ms (View: 23, DB: 3) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:40:25) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (7.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.2ms)
+Completed in 30ms (View: 16, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:41:46) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (9.4ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.5ms)
+Completed in 38ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:44:41) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.2ms)
+Completed in 117ms (View: 102, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:44:52) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (8.5ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.3ms)
+Completed in 36ms (View: 21, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:44:58) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (6.4ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendered articles/_article (1.4ms)
+Completed in 32ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:46:15) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.6ms)
+Rendered articles/_article (0.1ms)
+Completed in 25ms (View: 10, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-20 20:46:22) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 85ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:46:23) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:46:29) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"fayngersh"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.1ms)
+Rendered articles/_article (0.1ms)
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:46:53) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"fayngersh"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.6ms)
+Rendered articles/_article (0.1ms)
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:47:06) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"fayngersh"}
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.6ms)
+Rendered articles/_article (0.1ms)
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:47:20) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"fayngersh"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.6ms)
+Rendered articles/_article (0.1ms)
+Completed in 25ms (View: 10, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:48:18) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"fayngersh"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+
+ActionView::TemplateError (edit_article_url failed to generate from {:action=>"edit", :controller=>"articles", :id=>nil}, expected: {:action=>"edit", :controller=>"articles"}, diff: {:id=>nil}) on line #4 of app/views/articles/_article.html.erb:
+1: <h3><%=h article.title %></h3>
+2: <h4>By <%=h article.author %></h4>
+3: <p><%=h article.body %></p>
+4: <%= link_to 'Edit', edit_article_path(@article) %>
+5: <hr />
+
+    (eval):16:in `edit_article_path'
+    app/views/articles/_article.html.erb:4
+    app/views/articles/search.html.erb:76
+
+Rendered rescues/_trace (55.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:48:23) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"fayngersh"}
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.1ms)
+Rendered articles/_article (0.4ms)
+Completed in 25ms (View: 10, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-11-20 20:48:25) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles/7/edit]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:48:26) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:48:29) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.4ms)
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:48:43) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.1ms)
+Completed in 27ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:48:51) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.2ms)
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:49:48) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"sample"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.3ms)
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-20 20:49:50) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 88ms (View: 78, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:49:51) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:49:56) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.6ms)
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:50:09) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.3ms)
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:50:18) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.2ms)
+Completed in 105ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:50:58) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.3ms)
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:51:09) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.3ms)
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:51:16) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.3ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:51:26) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.6ms)
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:51:36) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.2ms)
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:51:42) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;35;1mArticle Load (2.2ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.9ms)
+Completed in 33ms (View: 15, DB: 3) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:51:52) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.5ms)
+Completed in 27ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-20 20:51:55) [GET]
+  Parameters: {"id"=>"search", "s"=>"article"}
+  [4;35;1mArticle Load (0.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Article with ID=search):
+  app/controllers/articles_controller.rb:17:in `show'
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:52:00) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:52:02) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"aticle"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-20 20:52:11) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:52:13) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:52:15) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.6ms)
+Rendered articles/_article (0.5ms)
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-20 20:52:21) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:52:43) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.5ms)
+Rendered articles/_article (0.3ms)
+Completed in 110ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:52:52) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"article"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7','8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.0ms)
+Rendered articles/_article (0.5ms)
+Completed in 25ms (View: 10, DB: 2) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:52:55) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:54:13) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 81ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:54:14) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:54:16) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"show"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-20 20:54:19) [POST]
+  Parameters: {"authenticity_token"=>"aNwH+5dGXvafIW4ilEzFO32zyfxotIgD+4sJVpk5kS0=", "query"=>"experimental"}
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.3ms)
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:54:23) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]

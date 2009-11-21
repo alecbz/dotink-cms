@@ -1,3 +1,4 @@
+<p style="color: green">Search result for term <em><%= @query %></em> resulted in <%= @total_hits %> hits<p>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
@@ -32,11 +33,14 @@
 
       <!-- search form -->
       <div class="search-block">
-        	<p>
-			  <% form_tag('/articles/search') do %>
-			    <%= text_field_tag 'query' %>
-			  <% end %>
-			</p>
+        <div class="searchform-wrap">
+          <form method="get" id="searchform" action="#">
+           <fieldset>
+            <input type="text" name="s" id="searchbox" class="searchfield" value="Search" onfocus="if(this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" />
+            <input type="submit" value="Go" class="go" />
+           </fieldset>
+          </form>
+        </div>
       </div>
       <!-- /search form -->
 
@@ -59,6 +63,8 @@
 
    </div>
 
+
+
    <div id="main-wrap1">
     <div id="main-wrap2">
      <div id="main" class="block-content">
@@ -67,65 +73,10 @@
         <div class="col1">
           <div id="main-content">
 
-            <!-- post -->
-            <div class="post">
-              	<% form_for(@article) do |f| %>
-				  <%= f.error_messages %>
-
-				  <p>
-				    <%= f.label :title %><br />
-				    <%= f.text_field :title %>
-				  </p>
-				  <p>
-				    <%= f.label :author %><br />
-				    <%= f.text_field :author %>
-				  </p>
-				  <p>
-				    <%= f.label :body %><br />
-				    <%= f.text_area :body %>
-				  </p>
-				  <p>
-				    <%= f.submit 'Update' %>
-				  </p>
-				<% end %>
-            </div>
-            <!-- /post -->
-	    
-	  </div>
-	  
-        </div>
-    	<div class="col2">
-	  
-          <ul id="sidebar">	    
-            <li class="block">
+            <%= render :partial => 'article', :collection => @articles %>
+			<%= will_paginate @articles, :params => {:query => @query} %>
 	      
-              <!-- box -->
-              <div class="box">
-		<div class="titlewrap"><h4><span><%= @article.title %></span></h4></div>
-		
-		<div class="wrapleft">
-		  <div class="wrapright">
-		    <div class="tr">
-                      <div class="bl">
-			<div class="tl">
-			  <div class="br the-content">
-			    <%= link_to 'Show', @article %>
-				<br />
-				<%= link_to 'Back', articles_path %>
-              </div>
-			</div>
-                      </div>
-		    </div>
-		  </div>
-		</div>
-		
-              </div>
-              <!-- /box -->
-	      
-            </li>
-	    
-          </ul>
-	  
+	  		</div>
         </div>
        </div>
       </div>
