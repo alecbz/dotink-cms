@@ -20,7 +20,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   # config.gem "rubyist-aasm", :lib => "aasm", :source => "http://gem.github.com"
-  config.gem 'jkraemer-acts_as_ferret', :version => '~> 0.4.4', :lib => 'acts_as_ferret', :source => 'http://gems.github.com'
+  config.gem 'acts_as_ferret'
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
