@@ -1,1 +1,3 @@
 dotInk Ad Agency BCA CMS Project
+
+run 'sudo rake gems:install' to install will_paginate and acts_as_ferret
