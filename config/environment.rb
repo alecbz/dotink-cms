@@ -1,4 +1,3 @@
-require 'acts_as_ferret'
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
@@ -41,4 +40,5 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
-ActsAsFerret.index_dir = "./tmp/index"
+require 'acts_as_ferret'
+ActsAsFerret.index_dir = "#{RAILS_ROOT}/tmp/index"
