@@ -1,3 +1,5 @@
+/* @override http://dotink.heroku.com/stylesheets/style.css */
+
 
 
 /*
@@ -409,7 +411,7 @@ blockquote p{
 }
 
 #pagetitle h1.logo a:hover{
-  color: #fff;
+  color: #f7feeb;
 }
 
 #pagetitle h4{
@@ -438,11 +440,12 @@ blockquote p{
 .search-block input{
   background: none;
   border: 0;
-  color: #928a85;
+  color: #eb3162;
   float: left;
   width: 100px;
   padding: 0;
   margin: 0;
+	font-size: 18px;
 }
 
 .search-block input.searchfield{

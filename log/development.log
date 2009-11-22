@@ -5686,3 +5686,101 @@ Processing HomeController#index (for 127.0.0.1 at 2009-11-20 20:54:23) [GET]
   [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
 Rendering home/index
 Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-21 16:44:56) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 35ms (View: 25, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-21 16:44:58) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 40ms (View: 30, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-21 16:45:01) [GET]
+
+ActionController::RoutingError (No route matches "/account" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-22 15:06:13) [GET]
+  [4;36;1mArticle Load (1.2ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 196ms (View: 161, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-22 15:06:21) [POST]
+  Parameters: {"authenticity_token"=>"hmrZcNtthKMOhh9E4tBVzeAW//dTyx0MYDDniRHC0T4=", "query"=>"o rly?"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering template within layouts/articles
+Rendering articles/search
+Completed in 196ms (View: 85, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-22 15:06:24) [POST]
+  Parameters: {"authenticity_token"=>"hmrZcNtthKMOhh9E4tBVzeAW//dTyx0MYDDniRHC0T4=", "query"=>"sample"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (1.4ms)
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-22 15:06:26) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 29ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-22 15:06:27) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-22 15:06:29) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 87ms (View: 79, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-22 15:06:38) [POST]
+  Parameters: {"authenticity_token"=>"hmrZcNtthKMOhh9E4tBVzeAW//dTyx0MYDDniRHC0T4=", "query"=>"sample*"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.4ms)
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-22 15:06:40) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
