@@ -1,2 +1,2 @@
 will_paginate
-active_scaffold
+active_scaffold --source git://github.com/activescaffold/active_scaffold.git
