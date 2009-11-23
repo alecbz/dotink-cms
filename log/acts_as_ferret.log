@@ -1490,3 +1490,5 @@ Query: sample*
 total hits: 1, results delivered: 1
 [article] register class Article with index article
 [article] refusing re-registration of class Article
+Will use local index.
+Will use local index.
