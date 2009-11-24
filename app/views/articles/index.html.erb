@@ -48,7 +48,19 @@
          <li><%= link_to '<span>Articles</span>', articles_path, :class => "fadeThis" %>
 	   <ul>
 	     <% for i in @latest_articles do %>
-	     <li><%= link_to i.title, i, :class => "fadeThis" %></li>
+	     <li>
+			<%= link_to i.title, i, :class => "fadeThis" %>
+			<ul>
+				<li>
+					<%= link_to i.category, i.category, :class => "fadeThis"%>
+					<ul>
+						<li>
+							<%= link_to i.category.section, i.category.section, :class => "fadeThis"%>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
 	     <% end %>
 	   </ul>
 	 </li>
@@ -106,7 +118,7 @@
                       <div class="bl">
 			<div class="tl">
 			  <div class="br the-content">
-			    <p><%= link_to "Write new article", :controller => "articles", :action => "new" %></p>
+			    <p>List of all dotInk articles</p>
                </div>
 			</div>
                       </div>

@@ -6205,3 +6205,1039 @@ Rendered admin/dashboard/_sidebar (0.5ms)
 Rendered admin/shared/_footer (1.0ms)
 Rendered admin/shared/_feedback (1.3ms)
 Completed in 35ms (View: 30, DB: 1) | 200 OK [http://127.0.0.1/admin]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:23:20) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 39ms (View: 29, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:23:22) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 43ms (View: 33, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:23:24) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:23:31) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 91ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:23:33) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:23:34) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:23:45) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:24:23) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 30ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:24:36) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 36ms (View: 22, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:24:46) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.3ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 37ms (View: 24, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:24:51) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 101ms (View: 87, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:24:56) [GET]
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-11-23 19:25:07) [GET]
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:25:10) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-23 19:25:18) [POST]
+  Parameters: {"authenticity_token"=>"BEL4GQ8Yyc9iycw+rVTgJAjlDTupRZjhlNH+tM2J06I=", "query"=>"sample"}
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.9ms)
+Completed in 95ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:25:20) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 31ms (View: 21, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:26:35) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 110ms (View: 97, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:26:39) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/articles/]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-11-23 19:26:41) [GET]
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+
+ActionView::MissingTemplate (Missing template articles/new.erb in view path app/views:/Library/Ruby/Gems/1.8/gems/typus-0.9.39/app/views):
+  app/controllers/articles_controller.rb:33:in `new'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-11-23 19:26:46) [GET]
+  [4;36;1mSection Load (0.6ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://127.0.0.1/sections]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-11-23 19:26:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/sections/1]
+
+
+Processing SectionsController#edit (for 127.0.0.1 at 2009-11-23 19:26:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template sections/edit.erb in view path app/views:/Library/Ruby/Gems/1.8/gems/typus-0.9.39/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-11-23 19:27:19) [GET]
+  [4;35;1mSection Load (0.6ms)[0m   [0mSELECT * FROM "sections" [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/sections]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-11-23 19:27:21) [GET]
+
+ActionView::MissingTemplate (Missing template sections/new.erb in view path app/views:/Library/Ruby/Gems/1.8/gems/typus-0.9.39/app/views):
+  app/controllers/sections_controller.rb:29:in `new'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-11-23 19:27:30) [GET]
+  [4;36;1mSection Load (0.7ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://127.0.0.1/sections]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-11-23 19:27:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://127.0.0.1/sections/1]
+
+
+Processing SectionsController#edit (for 127.0.0.1 at 2009-11-23 19:27:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSection Load (0.6ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template sections/edit.erb in view path app/views:/Library/Ruby/Gems/1.8/gems/typus-0.9.39/app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-11-23 19:27:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/sections/1]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-11-23 19:27:46) [GET]
+  [4;36;1mSection Load (0.5ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://127.0.0.1/sections]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:27:51) [GET]
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.3ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 30ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:27:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:27:54) [GET]
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:28:02) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:28:05) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:28:16) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 25ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-23 19:28:19) [POST]
+  Parameters: {"authenticity_token"=>"BEL4GQ8Yyc9iycw+rVTgJAjlDTupRZjhlNH+tM2J06I=", "query"=>"second"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('8')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.3ms)
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:28:22) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 98ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:33:13) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-23 19:33:17) [GET]
+
+ActionController::RoutingError (No route matches "/catgories" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:33:22) [GET]
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #50 of app/views/categories/index.html.erb:
+47:         <ul id="nav">
+48:          <li><%= link_to '<span>Articles</span>', articles_path, :class => "fadeThis" %>
+49: 	   <ul>
+50: 	     <% for i in @latest_articles do %>
+51: 	     <li><%= link_to i.title, i, :class => "fadeThis" %></li>
+52: 	     <% end %>
+53: 	   </ul>
+
+    app/views/categories/index.html.erb:50
+    app/controllers/categories_controller.rb:7:in `index'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:33:57) [GET]
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 33ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:34:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:34:03) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:34:04) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:34:09) [GET]
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mSection Load (0.3ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 95ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:37:20) [GET]
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.3ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 34ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:37:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 30ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:37:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;36;1mSection Load (0.3ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 34ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:37:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 33ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:38:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 34ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:38:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 34ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:39:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 34ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:39:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mSection Load (0.3ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 101ms (View: 85, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:39:29) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:39:35) [GET]
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:39:37) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 27ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:39:38) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:39:42) [GET]
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:39:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mArticle Load (73.2ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 97ms (View: 12, DB: 74) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:40:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-11-23 19:51:21) [GET]
+  [4;36;1mSection Load (0.6ms)[0m   [0;1mSELECT * FROM "sections" [0m
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/sections
+Rendering sections/index
+
+ActionView::TemplateError (undefined local variable or method `category' for #<ActionView::Base:0x103320100>) on line #79 of app/views/sections/index.html.erb:
+76: 	    		<% @sections.each do |section| %>
+77:             		<tr>
+78: 			    		<td><%=h section.name %></td>
+79: 			    		<td><%= link_to 'Show', category %></td>
+80: 			  		</tr>
+81: 	    		<% end %>
+82: 			</table>
+
+    app/views/sections/index.html.erb:79
+    app/views/sections/index.html.erb:76:in `each'
+    app/views/sections/index.html.erb:76
+    app/controllers/sections_controller.rb:9:in `index'
+
+Rendered rescues/_trace (122.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-11-23 19:51:44) [GET]
+  [4;36;1mSection Load (0.6ms)[0m   [0;1mSELECT * FROM "sections" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 27ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/sections]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-11-23 19:51:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 24ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/sections/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:51:49) [GET]
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:51:52) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:52:17) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 24ms (View: 14, DB: 2) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:52:19) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 107ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-11-23 19:52:26) [GET]
+  [4;35;1mSection Load (0.5ms)[0m   [0mSELECT * FROM "sections" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/sections]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-11-23 19:52:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/sections/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:52:28) [GET]
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mSection Load (0.3ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 98ms (View: 86, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:52:29) [GET]
+  [4;36;1mArticle Load (0.8ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:55:56) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 30ms (View: 20, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:55:57) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 85ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:56:00) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:56:03) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:56:12) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:56:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:56:18) [GET]
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:56:20) [GET]
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mSection Load (0.3ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 95ms (View: 81, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:56:21) [GET]
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:56:21) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:56:23) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 97ms (View: 87, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:56:24) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:56:24) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:56:27) [GET]
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-23 19:57:22) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Completed in 36ms (View: 26, DB: 1) | 200 OK [http://127.0.0.1/articles]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-11-23 19:57:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSection Load (0.3ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/sections/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:57:28) [GET]
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 94ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:57:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:57:34) [GET]
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:57:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;36;1mSection Load (0.3ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 96ms (View: 84, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:57:38) [GET]
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;35;1mSection Load (0.3ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing ArticlesController#search (for 127.0.0.1 at 2009-11-23 19:57:40) [POST]
+  Parameters: {"authenticity_token"=>"BEL4GQ8Yyc9iycw+rVTgJAjlDTupRZjhlNH+tM2J06I=", "query"=>"sample"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE (articles.id in ('7')) [0m
+Rendering template within layouts/articles
+Rendering articles/search
+Rendered articles/_article (0.3ms)
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/articles/search]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:57:41) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/articles/7]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:57:47) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 87ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:59:12) [GET]
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 32ms (View: 24, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-23 19:59:14) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.3ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 36ms (View: 25, DB: 1) | 200 OK [http://127.0.0.1/articles/8]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:59:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.3ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 107ms (View: 94, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:59:17) [GET]
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 35ms (View: 23, DB: 1) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-11-23 19:59:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.3ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 34ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-11-23 19:59:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSection Load (0.2ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/sections
+Rendering sections/show
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 108ms (View: 96, DB: 1) | 200 OK [http://127.0.0.1/sections/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-11-23 19:59:39) [GET]
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/categories
+Rendering categories/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.3ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 38ms (View: 22, DB: 2) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-11-23 19:59:39) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mSection Load (0.2ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/]

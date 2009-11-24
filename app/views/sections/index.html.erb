@@ -1,20 +1,163 @@
-<h1>Listing sections</h1>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
+<head>
+  <title>dotInk</title>
+  <style type="text/css">
+   @import "/stylesheets/style.css";
+   @import "/options/header-default.css";
+   @import "/options/content-default.css";
+   @import "/options/side-default.css";
+  </style>
 
-<% @sections.each do |section| %>
-  <tr>
-    <td><%=h section.name %></td>
-    <td><%= link_to 'Show', section %></td>
-    <td><%= link_to 'Edit', edit_section_path(section) %></td>
-    <td><%= link_to 'Destroy', section, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <!--[if lte IE 6]>
+   <style type="text/css" media="all">@import "ie6.css";</style>
+  <![endif]-->
 
-<br />
+ <script src="/javascripts/jquery.js" type="text/javascript"></script>
+ <script src="/javascripts/jquery.arclite.js" type="text/javascript"></script>
 
-<%= link_to 'New section', new_section_path %>
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+
+
+<body>
+ <!-- page -->
+ <div id="page" class="with-sidebar">
+  <div id="header-wrap">
+   <div id="header" class="block-content">
+     <div id="pagetitle">
+      <h1 class="logo"><%= link_to "dotInk", :controller => "home", :action => "index" %></h1>
+      <h4>The Ad Agency</h4>
+      <div class="clear"></div>
+
+      <!-- search form -->
+      <div class="search-block">
+        	<p>
+			  <% form_tag('/articles/search') do %>
+			    <%= text_field_tag 'query' %>
+			  <% end %>
+			</p>
+      </div>
+      <!-- /search form -->
+
+     </div>
+     <!-- main navigation -->
+     <div id="nav-wrap1">
+      <div id="nav-wrap2">
+        <ul id="nav">
+         <li><%= link_to '<span>Articles</span>', articles_path, :class => "fadeThis" %>
+	   <ul>
+	     <% for i in @latest_articles do %>
+	     <li>
+			<%= link_to i.title, i, :class => "fadeThis" %>
+			<ul>
+				<li>
+					<%= link_to i.category, i.category, :class => "fadeThis"%>
+					<ul>
+						<li>
+							<%= link_to i.category.section, i.category.section, :class => "fadeThis"%>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	     <% end %>
+	   </ul>
+	 </li>
+        </ul>
+      </div>
+     </div>
+     <!-- /main navigation -->
+
+   </div>
+
+
+
+   <div id="main-wrap1">
+    <div id="main-wrap2">
+     <div id="main" class="block-content">
+      <div class="mask-main rightdiv">
+       <div class="mask-left">
+        <div class="col1">
+          <div id="main-content">
+
+			<table>
+			  <tr>
+			    <th>Name</th>
+			  </tr>
+	    		<% @sections.each do |section| %>
+            		<tr>
+			    		<td><%=h section.name %></td>
+			    		<td><%= link_to 'Show', section %></td>
+			  		</tr>
+	    		<% end %>
+			</table>
+	    
+	  </div>
+	  
+        </div>
+    	<div class="col2">
+	  
+          <ul id="sidebar">
+              <div class="box">
+		<div class="titlewrap"><h4><span>Sections</span></h4></div>
+		
+		<div class="wrapleft">
+		  <div class="wrapright">
+		    <div class="tr">
+                      <div class="bl">
+			<div class="tl">
+			  <div class="br the-content">
+			    <p>List of all dotInk sections</p>
+               </div>
+			</div>
+                      </div>
+		    </div>
+		  </div>
+		</div>
+		
+              </div>
+              <!-- /box -->
+	      
+            </li>
+	    
+          </ul>
+	  
+        </div>
+       </div>
+      </div>
+      <div class="clear-content"></div>
+     </div>
+     
+     
+    </div>
+   </div>
+   
+  </div>
+  
+  <!-- footer -->
+  <div id="footer">
+    <div class="block-content">
+      <div class="copyright">
+	Arclite theme by <a href="http://digitalnature.ro/projects/arclite">digitalnature</a> | Validate <a href="http://validator.w3.org/check/referer">XHTML 1.1</a>
+      </div>
+    </div>
+  </div>
+  <!-- /footer -->
+  
+ </div>
+ <!-- /page -->
+ 
+ <script type="text/javascript">
+   /* <![CDATA[ */
+    var isIE6 = false; /* <- do not change! */
+    var isIE = false;  /* <- do not change! */
+    var lightbox = 1;  /* lightbox on/off ? */
+  /* ]]> */
+ </script>
+ <!--[if lte IE 6]> <script type="text/javascript"> isIE6 = true; isIE = true; </script> <![endif]-->
+ <!--[if gte IE 7]> <script type="text/javascript"> isIE = true; </script> <![endif]-->
+ 
+</body>
+
+</html>

@@ -3,6 +3,8 @@ class CategoriesController < ApplicationController
   # GET /categories.xml
   def index
     @categories = Category.all
+    @latest_articles = Article.find(:all, :order => 'created_at DESC', :limit => 5)
+    
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +16,8 @@ class CategoriesController < ApplicationController
   # GET /categories/1.xml
   def show
     @category = Category.find(params[:id])
+    @latest_articles = Article.find(:all, :order => 'created_at DESC', :limit => 5)
+    
 
     respond_to do |format|
       format.html # show.html.erb
