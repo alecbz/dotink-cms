@@ -1,0 +1,50 @@
+# Typus Models Configuration File
+#
+# Use the README file on the same folder as this file as a reference to
+# customize this file to your needs.
+
+Article:
+  fields:
+    list: title, author, category
+    form: title, author, body, category
+    show: id, title, author, body, created_at, updated_at, category
+  actions:
+    index:
+    edit:
+  order_by:
+  relationships: category
+  filters:
+  search:
+  application: dotink-cms
+  description:
+
+Category:
+  fields:
+    list: name, section
+    form: name, section
+    show: id, name, created_at, updated_at, section
+  actions:
+    index:
+    edit:
+  order_by:
+  relationships: articles, section
+  filters:
+  search:
+  application: dotink-cms
+  description:
+
+Section:
+  fields:
+    list: name
+    form: name
+    show: id, name, created_at, updated_at
+  actions:
+    index:
+    edit:
+  order_by:
+  relationships: categories
+  filters:
+  search:
+  application: dotink-cms
+  description:
+
