@@ -1794,3 +1794,5 @@ using index in /home/alec/dotink-cms/tmp/index/article
 [article] register class Article with index article
 [article] default field list for index article: [:author, :title, :body]
 Will use local index.
+Will use local index.
+Will use local index.
