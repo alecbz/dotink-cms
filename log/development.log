@@ -7241,3 +7241,18 @@ Rendering home/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
 Completed in 27ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 168.229.28.62 at 2010-01-27 09:24:09) [GET]
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5[0m
+Rendering home/index
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mSection Load (0.1ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 1) [0m
+Completed in 96ms (View: 90, DB: 1) | 200 OK [http://umbraserv.no-ip.org/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
