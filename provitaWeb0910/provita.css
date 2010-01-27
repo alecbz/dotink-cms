@@ -1,0 +1,277 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 10px 0 0 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+
+/* The conainer holds everything within the gray background of the body. This style defines the size, shape, and position within the browser window. */
+.provita #container {
+	width: 752px;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+
+/* Header section styles----------------------------------------------*/
+.provita #header {
+	position:relative;
+	background: #FFF;
+	background-image:url(images/newTree127x89.png);
+	background-repeat:no-repeat;
+	margin-left:60px; /* This is set so that the logo is set in from the left edge */
+	margin-top:12px; /* This is set so that the logo is set in from the top edge */
+	height: 103px; /* width of the height plus margin-top = 115px total */
+} 
+.login {
+	position:absolute;
+	width:380px;
+	bottom:12px;
+	right:20px; d4d4d3
+}
+.loginTextField {
+	background-color:#d4d4d3;
+	color:#fff; /*color of text */
+	font-weight:bold;
+	border:hidden;
+	padding:2px 0 2px 5px;
+	
+}
+.loginBtn{
+	margin:0 0 0 10px;
+	border:none;
+	padding:1px 15px 3px 15px;
+	background-color:#c7c7c7;
+	color:#fff; /*color of text */
+	font-weight:bold;
+	cursor:pointer;
+}
+#loginHelpers{
+	position:absolute;
+	width:190px;
+	top:1px;
+	right:26px;
+	text-align:right;
+	font: 0.9em/1.5em Arial, Helvetica, sans-serif;
+	text-decoration:none;
+}
+#loginHelpers a {
+	text-decoration: none;
+	color:#b0bd69;
+}
+#loginHelpers a:hover {
+	text-decoration: none;
+	color:#758c55;
+}
+
+/* Navigation (for the home page) styles----------------------------------------------*/
+.provita #container #navAndSearch {
+	position:relative;
+	background: #b0bd69;
+	color:#FFF;
+	height: 40px;
+	border-right: 246px solid #758c55;
+	border-left: 8px solid #758c55;
+	line-height:39px;  /* this centers the text in the navigation area */
+}
+/*Son of suckerfish styles for navigation.....................................................*/
+#nav, #nav ul {
+	float: left;
+	width: 36em;
+	font-size:.93em;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style: none;
+	line-height: 33px;
+	/*background: #b0bd69;*/
+	font-weight: bold;
+	padding: 0;
+	margin: 0 0 1em 0;
+}
+
+#nav a {
+	display: block;
+	width: 9.5em;
+	color: #fff;
+	text-decoration: none;
+	padding: 0.25em .5em;
+}
+
+#nav li {
+	float: left;
+	padding: 0;
+	width: 7.5em;
+}
+
+#nav li ul {
+	position: absolute;
+	left: -999em;
+	height: auto;
+	width: 8.35em;
+	background-color:#b0bd69;
+	font-size: .9em;
+	font-weight: normal;
+	margin: 0;
+}
+
+#nav li li {
+	padding-right: 1em;
+	width: 7.3em
+}
+
+#nav li ul a {
+	width: 8.2em;
+}
+
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li.sfhover ul ul, #nav li.sfhover ul ul ul {
+	left: -999em;
+}
+
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul {
+	left: auto;
+}
+
+#nav li:hover, #nav li.sfhover {
+	background: #758c55;
+}
+/* End of Son of suckerfish nav styles........................................................*/
+
+/* This adjusts the width of the home button in the nav bar --------------------*/
+.provita #container #navAndSearch #nav .homeBtn {
+	width: 5em;
+}
+/*to position the search form */
+.search {
+	position:absolute;
+	width:240px;
+	top:-1px;
+	right:-278px;
+}
+.searchText {
+	border:hidden;
+}
+.searchbtn {
+	margin:0;
+	border:none;
+	padding:0;
+	background-color:transparent;
+	color:#fff;
+	cursor:pointer;
+}
+
+/* This style is used for size and placement of the animation on the home page----------------------------------------------*/
+.provita #container #HomePageAnimation {
+	width: 752px;
+	height:190px;
+	line-height:176px;
+	margin: 0px 0px 0px 0px;
+	background: #E4F9FA;
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	color: #FFF;
+}
+
+/* Main content (for the home page) styles----------------------------------------------*/
+#mainContent {
+	margin: 0;
+	border:solid #FFF 10px;
+	background: #95aa7b;
+	background-image:url(images/updatesBG.gif);
+	background-position:right;
+	background-repeat:repeat-y;
+}
+#mainContent h1 {
+	font-size: 1.75em;
+	text-align: center;
+	border-bottom: 4px solid #FFF;
+}
+.provita #mission {
+	width: 453px;
+	float:left;
+	font: 1em "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #FFF;
+	/*margin-top: 0px;
+	margin-bottom: 0px;*/
+	padding: 0 20px 10px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+}
+
+/* Updates section styles----------------------------------------------*/
+#updates {
+	width:206px;
+	margin-left:496px;
+	margin-top:0px;
+	background: #d8e5c6;
+	padding:2px 10px 0px 10px;
+	font: 1em "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #000;
+	border-left: 10px solid #fff;
+}
+#updates p.smallText {
+	font-size: .8em;
+	margin-top:.3em;
+	margin-bottom:2px;
+}
+#updates h2 {
+	font-size: 1em;
+	margin-bottom: 0px;
+}
+#updates h3 {
+	margin-top:0px;
+	text-align:right;
+	font-size:.95em;
+}
+#updates h3 a {
+	color: #000;
+	text-decoration:none;
+}
+#updates h3 a:hover {
+	color: #758c55;
+}
+.updatesPic {
+	position:relative;
+	width:69px;
+	height:52px;
+	float:left;
+	margin-top:7px;
+	margin-right:10px;
+}
+
+/* Footer section styles----------------------------------------------*/
+.provita #footer {
+	position:relative;
+	height:74px; /* the gray area is only 56px */
+	line-height:66px; /* this centers the text in the gray area */
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#e7e7e7;
+	/*border-top: 10px solid #FFF;*/
+	border-right: 10px solid #FFF;
+	border-bottom: 8px solid #FFF;
+	border-left: 10px solid #FFF;
+	font: .8em "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#878282;
+} 
+.provita #footer #addressInfo {
+	position:absolute;
+	width:170px;
+	top:9px;
+	left:565px;
+	margin:0;
+}
+.provita #footer #copyrightInfo {
+	position:absolute;
+	width:200px;
+	top:32px;
+	left:15px;
+	margin:0;
+}
+/* Currently, only being used to help the footer go under the main content----------------------------------------------*/
+.clearAll {
+	margin:0;
+	clear:both;
+}

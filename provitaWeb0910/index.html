@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Untitled Document</title>
+    <link href="provita.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript"><!--//--><![CDATA[//><!--
+//The following function is used only where the browser doesn't understand the css (usually IE)
+sfHover = function() {
+	var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+//--><!]]>
+      
+      //the following clearDefault() function clears the content in each login form text field when the user clicks in the box
+      function clearDefault(el) {
+      if (el.defaultValue==el.value) el.value = ""
+      }
+      // -->
+    </script>
+  </head>
+  
+  <body class="provita">
+    <div id="container">
+      <div id="header">
+	<p id="loginHelpers"><a href="#">Apply now</a><br />
+	  <a href="#">Forgot your password?</a></p>
+        <form class="login" id="login" method="get" action="#"> 
+          <input class="loginTextField" name="userID" type="text" size="15" maxlength=255 value="Email" onfocus="clearDefault(this)" /> &nbsp;
+          <input class="loginTextField" name="pwd" type="text" size="15" maxlength=255 value="Password" onfocus="clearDefault(this)" /> 
+	  <input class="loginBtn" type="submit" name="login" value="Login" />
+	</form> 
+	<!-- end #header --></div>
+      <div id="navAndSearch">
+	<ul id="nav">
+	  <li class="homeBtn"><a href="index.html">HOME</a></li>
+	  <li><a href="#">ABOUT US</a>
+	    <ul>
+              <li><a href="#">Who We Are</a></li>
+              <li><a href="#">Groups</a></li>
+	    </ul>
+	  </li>
+	  <li><a href="#">PRODUCTS</a>
+	    <ul>
+	      <li><a href="#">Product A</a></li>
+	      <li><a href="#">Product B</a></li>
+	      <li><a href="#">Product C</a></li>
+	    </ul>
+	  </li>
+	  <li><a href="#">STRUCTURE</a>
+	    <ul>
+	      <li><a href="#">Structure A</a></li>
+	      <li><a href="#">Structure B</a></li>
+	      <li><a href="#">Structure C</a></li>
+	    </ul>
+	  </li>
+	  <li><a href="#">HISTORY</a>
+	    <ul>
+	      <li><a href="#">History A</a></li>
+	      <li><a href="#">History B</a></li>
+	      <li><a href="#">History C</a></li>
+	    </ul>
+	  </li>
+	</ul>
+	<!-- end #nav -->
+        <form class="search" id="search" method="get" action="http://www.google.com/search"> 
+          <input class="searchText" name="q" type="text" size="15" maxlength=255 value="" /> 
+	  <input class="searchbtn" type="submit" name="btnG" value="search" />
+	</form> 
+	<!-- end #navAndSearch --></div>
+      <div id="HomePageAnimation">
+	Animation
+	<!-- end #HomePageAnimation --></div>
+      <div id="mainContent">
+	<div id="mission">
+	  <h1>Our Mission</h1>
+	  <p>	Our mission is to contribute to the enrichment of quality of life around the world through the creation and production of innovative pharmaceuticals.</p>
+	  <p> Our focus is on our biologic product candidate Coagula that has been developed for hemophilia and von Willebrand Disease. We believe that if approved, Coagula may offer physicians and patients with a new treatment option with fewer injections, in result of natural relationship between part of the VWF molecule and Factor VIII. We also believe that Coagula will stop bleeding in even the most severe cases.      </p>
+	  <p>Provita is closely associated with the Bergen County Technical Schools. Exploiting their research program, Provita is committed to advancing its pipeline and expanding its product portfolio. </p>
+	  <!-- end #mission --></div>
+	<div id="updates">
+	  <h1>Updates</h1>
+	  <h2>News</h2>
+	  <img class="updatesPic" src="images/pic1.jpg" width="69" height="52" alt="pic1" />
+	  <p class="smallText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+	  <h3><a href="#">more...</a> </h3>
+	  <h2>News Pages</h2>
+	  <img class="updatesPic" src="images/pic2.jpg" width="69" height="52" alt="pic1" />
+	  <p class="smallText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+	  <h3><a href="#">more...</a> </h3>
+	  <h2>News Releases</h2>
+	  <img class="updatesPic" src="images/pic3.jpg" width="69" height="52" alt="pic1" /><p class="smallText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+	  <h3><a href="#">more...</a> </h3>
+	  <!-- end #updates --></div>
+	<div class="clearAll"></div>
+	<!-- end #mainContent --></div>
+      <div id="footer">
+	<div id="copyrightInfo">&copy; 2010 Provita | Contact |</div>
+	<p id="addressInfo">200 Hackensack Avenue<br />
+	  Hackensack, NJ 07601<br />201.343.6000<br />
+	  shezha@bergen.org</p>
+	<!-- end #footer --></div>
+      <!-- end #container --></div>
+  </body>
+</html>
